@@ -5,9 +5,117 @@
     <title>Car Dealership</title>
     <meta name="author" content="Louange David">
     <meta name="description" content="Car Dealership Website, HTML, CSS">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="icon" href="img/car-icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background-color: #0f1419; color: #fff; min-height: 100vh; display: flex; flex-direction: column; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* Navbar */
+        .navbar { 
+            background: rgba(15, 20, 25, 0.95); 
+            padding: 1rem 5%; 
+            border-bottom: 1px solid #2a3f47; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .navdiv { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            width: 100%; 
+        }
+        .logo h2 { 
+            font-size: 1.5rem; 
+            color: #1289a1; 
+            font-weight: 700; 
+        }
+        .nav-links { 
+            display: flex; 
+            gap: 25px; 
+            align-items: center; 
+        }
+        .nav-links li a { 
+            font-size: 0.95rem; 
+            font-weight: 500; 
+            color: #b0b0b0; 
+        }
+        .nav-links li a:hover { 
+            color: #1289a1; 
+        }
+        .nav-buttons { 
+            display: flex; 
+            gap: 15px; 
+            margin-left: 20px; 
+        }
+        .btn { 
+            padding: 8px 24px; 
+            border-radius: 50px; 
+            border: none; 
+            cursor: pointer; 
+            font-weight: 600; 
+            font-size: 0.9rem; 
+            transition: 0.3s; 
+        }
+        .btn-login { 
+            background: transparent; 
+            border: 1px solid #1289a1; 
+            color: #1289a1; 
+        }
+        .btn-login:hover { 
+            background: #1289a1; 
+            color: #fff; 
+        }
+        .btn-signup { 
+            background: #1289a1; 
+            color: #fff; 
+        }
+        .btn-signup:hover { 
+            background: #0f7a8f; 
+            transform: translateY(-2px); 
+        }
+
+        /* Sign Up Form */
+        main { flex: 1; display: flex; justify-content: center; align-items: center; padding: 60px 20px; background: url('img/porsche back.jpg') no-repeat center center/cover; }
+        .signup-container {
+            background: rgba(15, 20, 25, 0.85); backdrop-filter: blur(20px);
+            padding: 40px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);
+            width: 100%; max-width: 500px; box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+        .signup-container h2 { text-align: center; margin-bottom: 30px; color: #fff; font-size: 2rem; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; color: #b0b0b0; font-size: 0.9rem; }
+        .form-group input {
+            width: 100%; padding: 12px 15px; background: rgba(255,255,255,0.05);
+            border: 1px solid #2a3f47; border-radius: 8px; color: #fff; outline: none; transition: 0.3s;
+        }
+        .form-group input:focus { border-color: #1289a1; background: rgba(255,255,255,0.1); }
+        .checkbox-group { display: flex; align-items: center; gap: 10px; margin-bottom: 25px; font-size: 0.85rem; color: #b0b0b0; }
+        .checkbox-group input { accent-color: #1289a1; }
+        .submit-btn {
+            width: 100%; padding: 14px; background: #1289a1; color: #fff; border: none; border-radius: 8px;
+            font-size: 1rem; font-weight: 600; cursor: pointer; transition: 0.3s;
+        }
+        .submit-btn:hover { background: #0f7a8f; transform: translateY(-2px); }
+
+        /* Footer */
+        footer { background: #0a0d10; padding: 40px 5% 20px; border-top: 1px solid #1f2933; }
+        .footerContainer { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .footercontact ul { display: flex; gap: 20px; }
+        .footercontact a { color: #8b95a5; font-size: 0.9rem; }
+        .footercontact a:hover { color: #1289a1; }
+        .footersocial { display: flex; gap: 15px; align-items: center; }
+        .footersocial h4 { margin-right: 10px; color: #fff; font-weight: 500; }
+        .footersocial a { color: #8b95a5; font-size: 1.2rem; }
+        .footersocial a:hover { color: #1289a1; }
+        .footBottom { text-align: center; margin-top: 30px; width: 100%; color: #555; font-size: 0.85rem; }
+    </style>
 </head>
 
 <body >
@@ -15,49 +123,49 @@
       <nav class="navbar">  
         <div class="navdiv">
           <div class="logo">
-            <h2><a href="#">Car Dealership</a></h2>
+            <h2><a href="index.html">AutoLuxe</a></h2>
          </div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Inventory.html">Inventory</a></li>
                 <li><a href="Finance.html">Finance</a></li>
-                <li><a href="Trade-In.html">Trade In</a></li>
                 <li><a href="About.html">About</a></li>
                 <li><a href="Contact.html">Contact</a></li>
-                <button><a href="Log-In.html">Log In</a></button>
-                <button><a href="Sign-Up.html">Sign Up</a></button>
             </ul>
-                
-            
+            <div class="nav-buttons">
+                <a href="Admin.html"><button class="btn btn-login">Admin</button></a>
+                <a href="Sign-Up.html"><button class="btn btn-signup">Sign Up</button></a>
+            </div>
         </div>
       </nav>
     </header>
     <main>
-        <h2> Create your Profile</h2>
-    <form>
-      <fieldset>
-      <label for="fname">Lastname:</label><br>
-      <input type="text" name="fname" id="fname" 
-      placeholder="Enter your lastname"><br>
-      <label for="lname">Surname:</label><br>
-      <input type="text" name="lname" id="lname" 
-      placeholder="Enter your Surname"><br>
-      <label for="City">City:</label><br>
-      <input type="text" name="City" id="City" 
-      placeholder="Enter your city"><br>
-      <label for="email">Email:</label><br>
-      <input type="email" name="email" id="email" 
-      placeholder="Enter your email"><br>
-      <label for="key">Password:</label><br>
-      <input type="password" name="key" id="key"><br><br>
-      <input type="checkbox" id="privacy" name="privacy">
-      <label for="privacy">I have read and understand the 
-        privacy Statement</label>
-      
-      </fieldset>
-    </form>
-
-
+        <div class="signup-container">
+            <h2>Create Account</h2>
+            <form>
+                <div class="form-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" placeholder="Enter your first name">
+                </div>
+                <div class="form-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" placeholder="Enter your last name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="name@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Create a password">
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="privacy">
+                    <label for="privacy">I agree to the Privacy Policy and Terms of Service</label>
+                </div>
+                <button type="submit" class="submit-btn">Sign Up</button>
+            </form>
+        </div>
     </main>
     <footer>
       <div class="footerContainer">
@@ -71,13 +179,13 @@
          </div>
         <div class="footersocial">
           <h4>Follow us</h4>
-          <a href=""><i class="fa-brands fa-facebook"></i></a>
-          <a href=""><i class="fa-brands fa-instagram"></i></a>
-          <a href=""><i class="fa-brands fa-twitter"></i></a>
-          <a href=""><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
       </div>
       <div class="footBottom">
-        <p>&copy; 2023 Car Dealership</p>
+        <p>&copy; 2026 Car Dealership</p>
       </div>
       </div>
     </footer>
