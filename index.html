@@ -5,69 +5,12 @@
     <title>Car Dealership - Home</title>
     <meta name="author" content="Louange David">
     <meta name="description" content="Car Dealership Website, HTML, CSS">
-    <link rel="icon" href="img/car-icon.png" type="image/x-icon">
+    <link rel="icon" href="img/car icon.png" type="image/png">
+    <link rel="stylesheet" href="CSS/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background-color: #0f1419; color: #fff; min-height: 100vh; display: flex; flex-direction: column; }
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
-
-        /* Navbar */
-        .navbar { background: rgba(15, 20, 25, 0.95); padding: 1rem 5%; border-bottom: 1px solid #2a3f47; position: sticky; top: 0; z-index: 1000; }
-        .navdiv { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; width: 100%; }
-        .logo h2 { font-size: 1.5rem; color: #1289a1; font-weight: 700; }
-        .nav-links { display: flex; gap: 25px; align-items: center; }
-        .nav-links li a { font-size: 0.95rem; font-weight: 500; color: #b0b0b0; }
-        .nav-links li a:hover, .nav-links li a.active { color: #1289a1; }
-        .nav-buttons { display: flex; gap: 15px; margin-left: 20px; }
-        .btn { padding: 8px 24px; border-radius: 50px; border: none; cursor: pointer; font-weight: 600; font-size: 0.9rem; transition: 0.3s; }
-        .btn-login { background: transparent; border: 1px solid #1289a1; color: #1289a1; }
-        .btn-login:hover { background: #1289a1; color: #fff; }
-        .btn-signup { background: #1289a1; color: #fff; }
-        .btn-signup:hover { background: #0f7a8f; transform: translateY(-2px); }
-
-        /* Hero Section */
-        .hero {
-            flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;
-            text-align: center; padding: 80px 20px;
-            background: linear-gradient(rgba(15, 20, 25, 0.7), rgba(15, 20, 25, 0.7)), url('img/porsche back.jpg') no-repeat center center/cover;
-        }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 1rem; line-height: 1.2; }
-        .hero p { font-size: 1.1rem; color: #ccc; margin-bottom: 3rem; max-width: 600px; }
-
-        /* Search Form */
-        .search-form {
-            background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(15px);
-            padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1);
-            display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; align-items: flex-end;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        .form-group { display: flex; flex-direction: column; text-align: left; min-width: 200px; }
-        .form-label { font-size: 0.75rem; margin-bottom: 8px; color: #8b95a5; text-transform: uppercase; letter-spacing: 1px; font-weight: 600; }
-        .form-select { width: 100%; padding: 12px 15px; border-radius: 8px; border: 1px solid #2a3f47; background: #111e22; color: #fff; outline: none; cursor: pointer; }
-        .form-select:focus { border-color: #1289a1; }
-        .search-btn { padding: 12px 30px; background: #1289a1; color: #fff; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; display: flex; align-items: center; gap: 8px; height: 45px; }
-        .search-btn:hover { background: #0f7a8f; box-shadow: 0 5px 15px rgba(18, 137, 161, 0.3); }
-
-        /* Footer */
-        footer { background: #0a0d10; padding: 60px 5% 20px; border-top: 1px solid #1f2933; margin-top: auto; }
-        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; }
-        .footer-heading h2 { font-size: 1.1rem; margin-bottom: 20px; color: #fff; font-weight: 600; }
-        .footer-heading a { display: block; margin-bottom: 10px; color: #8b95a5; font-size: 0.9rem; }
-        .footer-heading a:hover { color: #1289a1; padding-left: 5px; }
-        .footer-socialmedia { display: flex; gap: 15px; margin-top: 10px; }
-        .footer-socialmedia a { width: 40px; height: 40px; background: #111e22; display: flex; justify-content: center; align-items: center; border-radius: 50%; color: #fff; transition: 0.3s; }
-        .footer-socialmedia a:hover { background: #1289a1; transform: translateY(-3px); }
-        .newsletter-input { width: 100%; padding: 12px; background: #111e22; border: 1px solid #2a3f47; color: #fff; border-radius: 5px; margin-bottom: 10px; outline: none; }
-        .newsletter-btn { width: 100%; padding: 12px; background: #1289a1; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-weight: 600; }
-        .newsletter-btn:hover { background: #0f7a8f; }
-        .footBottom { text-align: center; margin-top: 60px; padding-top: 20px; border-top: 1px solid #1f2933; color: #555; font-size: 0.85rem; }
-    </style>
 </head>
-<body >
+<body>
     <header>
       <nav class="navbar">  
         <div class="navdiv">
@@ -78,7 +21,7 @@
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="Inventory.html">Inventory</a></li>
                 <li><a href="Finance.html">Finance</a></li>
-                <li><a href="About.html">About</a></li>
+                <li><a href="About.html">About Us</a></li>
                 <li><a href="Contact.html">Contact</a></li>
             </ul>
             <div class="nav-buttons">
@@ -113,9 +56,55 @@
                 </select>
             </div>
             <button type="submit" class="search-btn">
-                <span class="material-symbols-outlined">search</span> Search
+                <i class="fa-solid fa-magnifying-glass"></i> Search
             </button>
         </form>
+        <h2> featured Inventory</h2>
+        <p>Hand-picked vehicles just for you.</p>
+        <div class="card-container">
+          <div class="card">
+            <span class="badge">New Arrival</span>
+            <img src="img/porsche og.jpg" alt="Car 1">
+            <div class="card-content">
+            <h3>Porsche 911</h3>
+            <p>Performance and luxury in one package.</p>
+            <a href="Inventory.html" class="btn">View Details</a>
+            </div>
+            
+          </div>
+          <div class="card">
+            <img src="img/BMW M5.jpg" alt="Car 2">
+            <div class="card-content">
+            <h3>BMW M5</h3>
+            <p>High-performance sedan with premium features.</p>
+            <a href="Inventory.html" class="btn">View Details</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/Audi A4.jpg" alt="Car 3">
+            <div class="card-content">
+            <h3>Audi A4</h3>
+            <p>Refined luxury and advanced technology.</p>
+            <a href="Inventory.html" class="btn">View Details</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/Mercedes 300sl.jpg" alt="Car 4">
+            <div class="card-content">
+            <h3>Mercedes 300sl</h3>
+            <p>Ultimate luxury and cutting-edge technology.</p>
+            <a href="Inventory.html" class="btn">View Details</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/Range Rover Sport.jpg" alt="Car 5">
+            <div class="card-content">
+            <h3>Range Rover Sport</h3>
+            <p>Luxury SUV with off-road capability.</p>
+            <a href="Inventory.html" class="btn">View Details</a>
+            </div>
+          </div>                                                    
+        </div>
     </main>
     <footer>
        <div class="footer-container">
